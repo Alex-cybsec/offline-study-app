@@ -1,0 +1,104 @@
+# Offline Study App — Project Plan
+
+## The Idea
+An Android app that fetches study content from the internet while the
+student is on WiFi, stores it on the device, and lets them browse it
+offline — like a personal, offline mini-internet for studying.
+
+## The Vision
+An app that **learns** what a student studies and automatically builds
+them a personal offline library — before they even ask.
+
+## Who It's For
+University and college students with:
+- Campus WiFi but limited/expensive mobile data
+- Spotty connectivity at home or on commutes
+- Heavy reading/research needs (articles, papers, videos)
+
+## The Problem It Solves
+- Students lose access to study material when offline
+- Data is expensive
+- Existing tools (Pocket, Chrome) are manual and not student-focused
+
+## What Makes It Different
+- Automatic fetching on WiFi
+- Student-first organization (courses, exams)
+- In-app browser that learns from reading behavior
+- Everything in one offline library (articles, PDFs, videos, notes)
+
+## Roadmap
+
+### v1 — Offline Saver
+- [ ] Save a URL → fetch page + images → read offline
+- [ ] Organize by course
+- [ ] WiFi auto-fetch for saved items
+
+### v2 — In-App Browser
+- [ ] WebView-based study browser
+- [ ] One-tap save to offline library
+- [ ] Track reading behavior (legally, inside the app)
+
+### v3 — It Learns
+- [ ] Detect study patterns from library + in-app reading
+- [ ] Suggest related content
+- [ ] Auto-fetch topics on WiFi
+
+### v4 — Video + PDFs
+- [ ] Short teaching videos (open/educational sources only)
+- [ ] PDF support (papers, lecture slides)
+- [ ] Transcripts + searchable notes
+
+### v5 — Study Packs
+- [ ] Share bundles with classmates
+- [ ] Optional encrypted cloud sync
+
+## Tech Stack (planned)
+- Language: Kotlin
+- UI: Jetpack Compose
+- Local DB: Room
+- File storage: Internal storage
+- Background: WorkManager (WiFi-triggered)
+- Fetching: OkHttp + Jsoup
+- Reader: WebView
+
+## Legal Guardrails
+- Save only content the user explicitly chooses
+- Respect robots.txt
+- Store locally only (no re-sharing content)
+- Never bulk-download paid/paywalled content
+- Never scrape LMS platforms (Canvas/Moodle) — ToS violation
+- Add in-app disclaimer: "For personal offline reading only"
+- Video: only open/educational sources (Khan Academy, MIT OCW, teacher-shared)
+
+## How the App Learns (Without Spying)
+Android apps cannot see what users do in Chrome (sandboxing).
+So the app learns from:
+1. Content shared to it from other apps
+2. Reading inside its own in-app browser (WebView)
+3. Patterns in the user's saved library
+
+## Money Path (honest)
+- Free + ads (AdMob) at first
+- Premium subscription later (unlimited storage, video, sync)
+- Google Play fees: ~10-20% cut, $100 minimum payout
+- Realistic: KES 0 for first 3-6 months, small income after 6-12 months
+- The real near-term value = skills (Android dev) + portfolio
+
+## My Learning Plan
+- Course: Android Basics with Compose (developer.android.com)
+- 1-2 hours/day
+- Learn → build → learn → build (don't get stuck in tutorial hell)
+- Build v1 in ~4-6 months
+
+## Current Status
+- [x] GitHub repo created: offline-study-app
+- [x] README written
+- [ ] PLAN.md added
+- [ ] Started Android Basics with Compose — Unit 1, Lesson 1
+- [ ] Built first screen
+- [ ] Built v1
+
+## Notes
+- Started: [add date]
+- Goal launch: [add date]
+- Why I'm doing this: skills + income + helping students
